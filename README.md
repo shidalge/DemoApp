@@ -20,5 +20,5 @@ Este proyecto es una **demo de una API REST** construida con **ASP.NET Core Web 
 ## 📌 Notas
 
 - El contador del `DemoController` se almacena en memoria y se reinicia al reiniciar la aplicación.
-- Este proyecto está diseñado con fines demostrativos y educativos.
+- Este proyecto está diseñado con fines demostrativos.
 
