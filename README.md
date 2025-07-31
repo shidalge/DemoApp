@@ -3,7 +3,7 @@
 Este proyecto es una **demo de una API REST** construida con **ASP.NET Core Web API (.NET 8)**.
 
 ## ✨ Características
-
+- Cambio agregado para el PR
 - Utiliza el controlador por defecto `WeatherForecastController`, que devuelve una lista de objetos con datos simulados de clima.
 - Incluye un controlador adicional llamado `DemoController`, que expone un endpoint `GET` que devuelve un número incremental en cada solicitud, comenzando desde 0.
 
