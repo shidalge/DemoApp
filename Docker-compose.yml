@@ -1,8 +1,8 @@
 version: '2'
 services:
-  mymvcweb:
+  demo-app:
     build:
-      context: ./mymvcweb
+      context: ./DemoApp
       dockerfile: Dockerfile
     expose:
       - "5000"
@@ -13,4 +13,4 @@ services:
     ports:
       - "80:80"
     links :
-      - mymvcweb
+      - demo-app
