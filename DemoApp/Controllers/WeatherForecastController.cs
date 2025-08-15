@@ -29,5 +29,18 @@ namespace DemoApp.Controllers
             })
             .ToArray();
         }
+
+        [HttpGet("force500")]
+        public IActionResult ForceInternalServerError()
+        {
+            return StatusCode(500, "Error forzado para pruebas de monitoreo");
+        }
+
+
+        [HttpGet("force400")]
+        public IActionResult ForceBadRequest()
+        {
+            return BadRequest("Solicitud inválida para pruebas de monitoreo");
+        }
     }
 }
