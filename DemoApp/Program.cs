@@ -4,7 +4,6 @@ using Serilog;
 using Serilog.Sinks.Grafana.Loki;
 
 // Logging with Loki
-
 Log.Logger = new LoggerConfiguration()
     .MinimumLevel.Debug()
     .WriteTo.GrafanaLoki(
@@ -16,7 +15,7 @@ Log.Logger = new LoggerConfiguration()
     )
     .CreateLogger();
 
-Log.Information("Aplicación iniciada correctamente");
+Log.Information("Application started correctly");
 
 var builder = WebApplication.CreateBuilder(args);
 
