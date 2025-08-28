@@ -1,4 +1,5 @@
 using Microsoft.AspNetCore.Mvc;
+using Serilog;
 
 namespace DemoApp.Controllers
 {
@@ -33,6 +34,7 @@ namespace DemoApp.Controllers
         [HttpGet("force500")]
         public IActionResult ForceInternalServerError()
         {
+            Log.Error("Error 500: Este es un log de prueba desde la app .NET");
             return StatusCode(500, "Error forzado para pruebas de monitoreo");
         }
 

@@ -1,5 +1,22 @@
 
 using Prometheus;
+using Serilog;
+using Serilog.Sinks.Grafana.Loki;
+
+// Logging with Loki
+
+Log.Logger = new LoggerConfiguration()
+    .MinimumLevel.Debug()
+    .WriteTo.GrafanaLoki(
+        uri: "http://loki:3100",
+        labels:
+        [
+            new LokiLabel { Key = "app", Value = "demo-app" }
+        ]
+    )
+    .CreateLogger();
+
+Log.Information("Aplicación iniciada correctamente");
 
 var builder = WebApplication.CreateBuilder(args);
 
