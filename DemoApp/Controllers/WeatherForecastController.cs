@@ -22,6 +22,8 @@ namespace DemoApp.Controllers
         [HttpGet(Name = "GetWeatherForecast")]
         public IEnumerable<WeatherForecast> Get()
         {
+            Log.Information("Weather info returned");
+
             return Enumerable.Range(1, 5).Select(index => new WeatherForecast
             {
                 Date = DateOnly.FromDateTime(DateTime.Now.AddDays(index)),
@@ -42,6 +44,8 @@ namespace DemoApp.Controllers
         [HttpGet("force400")]
         public IActionResult ForceBadRequest()
         {
+            Log.Warning("Error 400: Testing");
+
             return BadRequest("Solicitud inválida para pruebas de monitoreo");
         }
     }
