@@ -20,7 +20,9 @@ scrape_configs:
         action: keep
 
     pipeline_stages:
-      - regex:
-          expression: "^(?P<level>[A-Z]+)"
+      - json:
+          expressions:
+            level: level
+            message: Message
       - labels:
           level:
