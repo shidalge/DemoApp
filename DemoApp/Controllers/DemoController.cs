@@ -1,6 +1,5 @@
 ﻿
 using Microsoft.AspNetCore.Mvc;
-using System.Threading;
 
 namespace DemoApp.Controllers
 {
@@ -18,4 +17,3 @@ namespace DemoApp.Controllers
         }
     }
 }
-
